@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>First form</title>
+    <link rel="stylesheet" href="exstyle.css">
+    <link href="https://4.imimg.com/data4/BJ/KH/MY-4213378/cobra-file-500x500.jpg" rel="icon" type="image/ico">
+    <style>
+        h1{
+        color: navy;
+        }
+        /*label{
+            color: red;
+        }*/
+        #center {
+  text-align: center;
+  color: blue !important;
+}
+    </style>
+</head>
+    <body>
+    <h1 id="center">Form of a student.</h1>
+    <p id="center">Please enter details</p>
+    <form action="script1.html" method="GET">
+        <fieldset>
+     <legend>Details:</legend>
+        <div>
+        <label style="color:greenyellow;"id="center">First name</label><br>
+        <input type="text"  id="fname" name="fname" value="sunil" required><br>
+        <label for="lname" style="color:red;">Last name</label><br>
+        <input type="text" id="lname" name="lname" value="Reddy" required><br><br>
+        <div>
+        </fieldset>
+      <br>  <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male" style="color:red;">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><BR><BR>
+        <label for="branch">Choose your branch</label>
+        <select id="branch" name="branch" required>
+            <option value="   " selected></option>
+            <option value="EEE" requ>EEE</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="IT">IT</option>
+        </select>
+       <br><BR> <input type="Submit" value="Submit">
+        </div>
+    </form>
+</body>
+    </html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<head>
+<title>Studentinfo</title>
+<link rel="stylesheet" href="mystyle.css">
+<linkl rel="icon" href="https://4.imimg.com/data4/BJ/KH/MY-4213378/cobra-file-500x500.jpg" type="image/ico">
+</head>
+<body>
+<div id="studentinfo"></div>
+<a href="C:\Users\sunil.thavitireddy\Desktop\sunil\form.html">Back to Form</a>
+<script>
+   const studentinfoList=document.getElementById('studentinfo')
+   new URLSearchParams(window.location.search).forEach((value,
+    name)=>{
+                       studentinfoList.append(name+" "+value)
+                       studentinfoList.append(document.createElement('br'))
+                   })
+</script>
+</body>
+</html>
