@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="exstyle.css">
     <link href="https://4.imimg.com/data4/BJ/KH/MY-4213378/cobra-file-500x500.jpg" rel="icon" type="image/ico">
     <style>
+        #f{
+            float: left;
+        }
+        #f1{
+            clear: both;
+        }
         h1{
         color: navy;
         }
@@ -19,18 +25,19 @@
 </head>
     <body>
     <h1 id="center">Form of a student.</h1>
-    <p id="center">Please enter details</p>
+    <p id="f1">Please enter details </p>
     <form action="script1.html" method="GET">
-        <fieldset>
+        <fieldset id="f">
      <legend>Details:</legend>
         <div>
         <label style="color:greenyellow;"id="center">First name</label><br>
         <input type="text"  id="fname" name="fname" value="sunil" required><br>
         <label for="lname" style="color:red;">Last name</label><br>
         <input type="text" id="lname" name="lname" value="Reddy" required><br><br>
-        <div>
+        </div>
         </fieldset>
-      <br>  <input type="radio" id="male" name="gender" value="male" required>
+        <br><div id="f1">
+      <br><input type="radio" id="male" name="gender" value="male" required>
         <label for="male" style="color:red;">Male</label><br>
         <input type="radio" id="female" name="gender" value="female" required>
         <label for="female">Female</label><BR><BR>
