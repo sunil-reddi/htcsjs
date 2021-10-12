@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .tooltip{
+          padding: 25px;
+      }
+      .tooltip .tooltext{
+       visibility: hidden;
+       width: 100px;
+       position:absolute;
+       background-color: black;
+       color:white;
+       text-align: center;
+       border-radius: 6px;
+       padding: 2px ;
+      }
+    #top{
+      transform: translate(-80px, -30px); 
+     }
+     #bottom{
+        transform: translate(-80px, 25px);
+     }
+     #right{
+      transform: translate(5px, -2px);
+     }
+     #left{
+      transform: translate(-150px, -5px);
+    
+     }
+      .tooltip:hover .tooltext{
+          visibility: visible;
+      }
+    </style>
+<body style="text-align: center;">
+    <h1>This is about tooltip</h1>
+     <div class="tooltip" style="cursor: pointer;">Hidden
+        <span class="tooltext" id="top">Top.</span>
+     </div>
+     <div class="tooltip" style="cursor: pointer;">Hidden
+        <span class="tooltext bottom" id="bottom" >Bottom.</span>
+     </div>
+     <div class="tooltip" style="cursor: pointer;">Hidden
+        <span class="tooltext bottom" id="right" >Right.</span>
+     </div>
+     <div class="tooltip" style="cursor: pointer;">Hidden
+        <span class="tooltext bottom" id="left" >Left.</span>
+     </div>
+     <div class="tooltip" style="cursor: pointer;">Hidden
+      <span class="tooltext bottom" >Top.</span>
+   </div>
+
+</body>
+</html>
