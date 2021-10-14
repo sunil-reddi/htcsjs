@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            padding: 5px;
+            margin: 20px;
+            border: 1px solid rgb(187, 187, 187);
+            width: 100px;
+            background-color: rgb(238, 238, 238);
+           
+        }
+       [tooltip]::after{
+           background: black;
+           padding: 5px;
+           width: fit-content;
+           height: fit-content;
+           opacity: 0.5;
+           border-radius: 6px;
+           color: rgb(255, 255, 255);
+           position: absolute;
+           content: attr(tooltip);
+           display: none;
+       }
+       [tooltip]:hover::after{
+           display: block;
+       }
+      /* [tooltip]:hover::before{
+           bottom: 15%;
+           left:55%;
+           content:"";
+            border: 7px solid;
+            border-color: #333 transparent transparent transparent;
+       } */
+       [tooltip-position="top"]:hover::before{
+           position: absolute;
+           bottom: 78%;
+           left: 49%;
+           content:"";
+            border: 7px solid;
+            border-color: #333 transparent transparent transparent;
+        }
+       [tooltip-position="top"]:hover::after{
+           bottom:81%;
+           left: 46%;
+       }
+       [tooltip-position="bottom"]:hover::before{
+           position: absolute;
+           top: 48%;
+           left: 49%;
+           content:"";
+            border: 7px solid;
+            border-color: transparent transparent  #333 transparent;
+        }
+       [tooltip-position="bottom"]::after{
+        top:51%;
+        left:46%;
+       }
+       [tooltip-position="left"]:hover::before{
+           position: absolute;
+           bottom: 23%;
+           right:60%;
+           content:"";
+            border: 8px solid;
+            border-color: transparent transparent transparent #333;
+        }
+       [tooltip-position="left"]::after{
+       right:62%;
+       top:72%;
+       }
+        [tooltip-position="right"]:hover::before{
+           position: absolute;
+           bottom: 37%;
+           left: 58%;
+           content:"";
+            border: 8px solid;
+            border-color: transparent #333 transparent transparent;
+        }
+       
+       [tooltip-position="right"]::after{
+       left:60%;
+       top:58%;
+       }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1>This is about tooltip</h1>
+    <div tooltip="tooltext" tooltip-position="top"> TOP</div>
+    <div tooltip="tooltext" tooltip-position="bottom">Bottom</div>
+    <div tooltip="tooltext" tooltip-position="right"> Right</div>
+    <div tooltip="tooltext" tooltip-position="left"> Left</div>
+    <div tooltip="tooltext">Default Top</div>
+</body>
+</html>
