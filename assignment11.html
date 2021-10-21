@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            padding: 20px;
+            margin: 20px;
+            width: 100px;
+            height: 100%;
+        }
+       [tooltip]::after{
+           background: black;
+           padding: 5px;
+           border-radius: 6px;
+           color: rgb(255, 255, 255);
+           position: absolute;
+           content: attr(tooltip);
+           display: none;
+       }
+
+       [tooltip-position="top"]::after{
+        display: flex;
+       }
+       [tooltip-position="bottom"]::after{
+        transform: translate(-50px, 20px);
+       }
+       [tooltip-position="left"]::after{
+        transform: translate(-90px, -5px);;
+          
+       }
+       [tooltip-position="right"]::after{
+        transform: translate(5px, -5px);
+       }
+    </style>
+</head>
+<body>
+    <h1>This is about tooltip</h1>
+    <div tooltip="tooltext" tooltip-position="top"> TOP</div>
+    <div tooltip="tooltext" tooltip-position="bottom">Bottom</div>
+    <div tooltip="tooltext" tooltip-position="right"> Right</div>
+    <div tooltip="tooltext" tooltip-position="left"> Left</div>
+    <div tooltip="tooltext" tooltip-position="">Default Top</div>
+</body>
+</html>
